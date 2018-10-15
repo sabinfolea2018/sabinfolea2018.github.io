@@ -1,2 +1,2 @@
 # sabinfolea2018.github.io
-personal website & web apps
+_personal website_ & **web apps**
