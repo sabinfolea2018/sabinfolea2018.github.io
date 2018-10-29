@@ -1,7 +1,7 @@
 var stopped = false;
 
 onmessage = function(e) {
-	if (e.data = "stop") {stopped = true;)
+	if (e.data = "stop") {stopped = true;}
 }
 
 function is_prim(n)
