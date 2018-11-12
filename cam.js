@@ -2,7 +2,7 @@ document.getElementById("id_button").addEventListener("click",start);
 
 function on_success(e)
 {
-	document.getElementById("id_video").srcObject = e;
+	document.getElementById("video").srcObject = e;
 }
 
 function on_failure(e)
