@@ -21,16 +21,44 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
 });
-let button = document.getElementById("get-location");
-let latText = document.getElementById("latitude");
-let longText = document.getElementById("longitude");
+var findMeButton = $('.find-me');
 
-button.addEventListener("click", function() {
-  navigator.geolocation.getCurrentPosition(function(position) {
-    let lat = position.coords.latitude;
-    let long = position.coords.longitude;
+// Check if the browser has support for the Geolocation API
+if (!navigator.geolocation) {
 
-    latText.innerText = lat.toFixed(2);
-    longText.innerText = long.toFixed(2);
+  findMeButton.addClass("disabled");
+  $('.no-browser-support').addClass("visible");
+
+} else {
+
+  findMeButton.on('click', function(e) {
+
+    e.preventDefault();
+
+    navigator.geolocation.getCurrentPosition(function(position) {
+
+      // Get the coordinates of the current possition.
+      var lat = position.coords.latitude;
+      var lng = position.coords.longitude;
+
+      $('.latitude').text(lat.toFixed(3));
+      $('.longitude').text(lng.toFixed(3));
+      $('.coordinates').addClass('visible');
+
+      // Create a new map and place a marker at the device location.
+      var map = new GMaps({
+        el: '#map',
+        lat: lat,
+        lng: lng
+      });
+
+      map.addMarker({
+        lat: lat,
+        lng: lng
+      });
+
+    });
+
   });
-});
+
+}

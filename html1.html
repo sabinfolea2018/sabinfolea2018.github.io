@@ -16,26 +16,22 @@
 		<div>Beta: <span id="tiltLR"></span></div>
 		<div>Alpha: <span id="direction"></span></div>
 	</div>
-	<button onclick="getLocation()">Obtine locatia</button>
-
-	<p id="demo"></p>
 	
-<script>
-var x = document.getElementById("demo");
+	
+	<br> <form id="geocoding_form" class="form-horizontal">
+    <div class="form-group">
+      <div class="col-xs-12 col-md-6 col-md-offset-3">
+        <button type="button" class="find-me btn btn-info btn-block">Find My Location</button>
+      </div>
+    </div>
+  </form>
 
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
+  <p class="no-browser-support">Sorry, the Geolocation API isn't supported in Your browser.</p>
+  <p class="coordinates">Latitude: <b class="latitude">42</b> Longitude: <b class="longitude">32</b></p>
 
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
-}
-</script>
+  <div class="map-overlay">
+    <div id="map"></div>
+  </div>
 
 	
 	</body>
