@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
       document.getElementById("id_beta").innerHTML = Math.ceil(beta);
       document.getElementById("id_alpha").innerHTML = Math.ceil(alpha);
       var compassDisc = document.getElementById("compassDiscImg");
-      compassDisc.style.webkitTransform = "rotate("+ dir +"deg)";
-      compassDisc.style.MozTransform = "rotate("+ dir +"deg)";
-      compassDisc.style.transform = "rotate("+ dir +"deg)";
+      compassDisc.style.webkitTransform = "rotate("+ id_alpha +"deg)";
+      compassDisc.style.MozTransform = "rotate("+ id_alpha +"deg)";
+      compassDisc.style.transform = "rotate("+ id_alpha +"deg)";
     }
 
 });
