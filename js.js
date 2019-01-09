@@ -14,6 +14,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
       document.getElementById("gama").innerHTML = Math.ceil(gama);
       document.getElementById("beta").innerHTML = Math.ceil(beta);
       document.getElementById("alpha").innerHTML = Math.ceil(alpha);
+      var compassDisc = document.getElementById("compassDiscImg");
+      compassDisc.style.webkitTransform = "rotate("+ dir +"deg)";
+      compassDisc.style.MozTransform = "rotate("+ dir +"deg)";
+      compassDisc.style.transform = "rotate("+ dir +"deg)";
     }
 
 });
