@@ -2,18 +2,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	if (window.DeviceOrientationEvent) {
   window.addEventListener('deviceorientation', function(eventData) {
-    var gama = eventData.gamma;
-    var beta = eventData.beta;
-    var alpha = eventData.alpha;
-    deviceOrientationHandler(gama, beta, alpha);
+    var id_gama = eventData.gamma;
+    var id_beta = eventData.beta;
+    var id_alpha = eventData.alpha;
+    deviceOrientationHandler(id_gama, id_beta, id_alpha);
   }, false);
 } else {
 };
 
-    function deviceOrientationHandler(gama, beta, alpha) {
-      document.getElementById("gama").innerHTML = Math.ceil(gama);
-      document.getElementById("beta").innerHTML = Math.ceil(beta);
-      document.getElementById("alpha").innerHTML = Math.ceil(alpha);
+    function deviceOrientationHandler(id_gama, id_beta, id_alpha) {
+      document.getElementById("id_gama").innerHTML = Math.ceil(gamma);
+      document.getElementById("id_beta").innerHTML = Math.ceil(beta);
+      document.getElementById("id_alpha").innerHTML = Math.ceil(alpha);
       var compassDisc = document.getElementById("compassDiscImg");
       compassDisc.style.webkitTransform = "rotate("+ dir +"deg)";
       compassDisc.style.MozTransform = "rotate("+ dir +"deg)";
