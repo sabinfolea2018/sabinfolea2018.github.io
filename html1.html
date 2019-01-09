@@ -18,20 +18,27 @@
 	</div>
 	
 	
-	<br> <form id="geocoding_form" class="form-horizontal">
-    <div class="form-group">
-      <div class="col-xs-12 col-md-6 col-md-offset-3">
-        <button type="button" class="find-me btn btn-info btn-block">Find My Location</button>
-      </div>
-    </div>
-  </form>
+	<br> 
+	<button onclick="getLocation()">Obtine locatia</button>
 
-  <p class="no-browser-support">Sorry, the Geolocation API isn't supported in Your browser.</p>
-  <p class="coordinates">Latitude: <b class="latitude">42</b> Longitude: <b class="longitude">32</b></p>
+<p id="demo"></p>
 
-  <div class="map-overlay">
-    <div id="map"></div>
-  </div>
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitudine: " + position.coords.latitude + 
+  "<br>Longitudine: " + position.coords.longitude;
+}
+</script>
 
 	
 	</body>
