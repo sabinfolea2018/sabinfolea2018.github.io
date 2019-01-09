@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     // alpha: The direction the compass of the device aims to in degrees.
     // alpha: De richting waarin de kompas van het apparaat heen wijst in graden.
-    var dir = eventData.alpha
+    var dir = eventData.alpha;
 
     // Call the function to use the data on the page.
     // Roep de functie op om de data op de pagina te gebruiken.
