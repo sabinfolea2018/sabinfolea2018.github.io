@@ -16,14 +16,28 @@
 		<div>Beta: <span id="tiltLR"></span></div>
 		<div>Alpha: <span id="direction"></span></div>
 	</div>
+	<button onclick="getLocation()">Obtine locatia</button>
+
+	<p id="demo"></p>
 	
-<p>
-  Latitudine:  <span id="latitude">0.00</span>°
-  Longitudine <span id="longitude">0.00</span>° 
-</p>
-<button id="get-location">
-  Obtine locatia
-</button>
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+	
 	</body>
 </center>
 	</html>
