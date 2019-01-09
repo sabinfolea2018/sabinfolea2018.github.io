@@ -30,7 +30,7 @@ body {
 	top: 20px;
 	left: 20px;
 	z-index: 200;
-	background-image: compass.svg;
+	background-image: url("compass.svg");
 	width: 260px;
 	height: 260px;
 	background-size: 100%;
@@ -41,7 +41,7 @@ body {
 	top: 20px;
 	left: 20px;
 	z-index: 1000;
-	background-image: arrow.svg;
+	background-image: url("arrow.svg");
 	width: 260px;
 	height: 260px;
 	background-size: 100%;
