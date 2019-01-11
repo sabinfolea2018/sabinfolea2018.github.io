@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   window.addEventListener('deviceorientation', function(eventData) {
     var tiltLR = eventData.gamma;
     var tiltFB = eventData.beta;
-    var dir = eventData.alpha-90;
+    var dir = eventData.alpha;
     deviceOrientationHandler(tiltLR, tiltFB, dir);
   }, false);
 } else {
