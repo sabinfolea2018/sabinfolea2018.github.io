@@ -30,12 +30,10 @@ body {
 	top: 20px;
 	left: 20px;
 	z-index: 200;
-	background: url("compass.svg");
+	background: url('http://dev.rvltn.eu/compass/compass.svg');
 	width: 260px;
 	height: 260px;
 	background-size: 100%;
-	
-	
 }
 
 .compass .arrow {
@@ -43,7 +41,7 @@ body {
 	top: 20px;
 	left: 20px;
 	z-index: 1000;
-	background: url("arrow.svg");
+	background: url('http://dev.rvltn.eu/compass/arrow.svg');
 	width: 260px;
 	height: 260px;
 	background-size: 100%;
