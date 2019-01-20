@@ -3,7 +3,9 @@ html, body {
 	padding: 0;
 	height: 100%;
 }
-
+.clock {
+  font-size: 2em;
+}
 body {
 	margin: 30px;
 	background: rgb(15, 15, 15);
