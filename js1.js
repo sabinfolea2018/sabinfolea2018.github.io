@@ -20,13 +20,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
       compassDisc.style.MozTransform = "rotate("+ dir +"deg)";
       compassDisc.style.transform = "rotate("+ dir +"deg)";
     }
-function clock() {// We create a new Date object and assign it to a variable called "time".
+function clock() {// 
 var time = new Date(),
     
-    // Access the "getHours" method on the Date object with the dot accessor.
     hours = time.getHours(),
     
-    // Access the "getMinutes" method with the dot accessor.
     minutes = time.getMinutes(),
     
     
